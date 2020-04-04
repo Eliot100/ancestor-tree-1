@@ -10,7 +10,7 @@ namespace family {
 		node *mother, *father;
 		public:
 			node (string personName) {
-				this.name = personName;
+				this->name = personName;
 			}
 			
 	};
