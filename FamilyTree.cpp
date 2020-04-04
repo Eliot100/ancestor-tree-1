@@ -10,7 +10,7 @@ namespace family {
 		node *mother, *father;
 		public:
 			node (string personName)
-			: name(personName), relation("me"){}
+			: name(personName), relation("me"), mother(NULL), father(NULL){}
 			
 	};
 	
