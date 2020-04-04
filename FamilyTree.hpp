@@ -8,7 +8,7 @@ namespace family {
 		node *mother, *father;
 		public:
 			node (string personName);
-	}
+	};
 	
 	class  Tree {
 		node root;
@@ -21,6 +21,6 @@ namespace family {
 			string find (string relation2Root);
 			void display (Tree tree);
 			Tree& remove (string name) ;
-	}
+	};
 	
 }

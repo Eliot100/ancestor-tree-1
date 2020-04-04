@@ -11,7 +11,7 @@ namespace family {
 		public:
 			node (string personName) : name(personName) {}
 			
-	}
+	};
 	
 	class  Tree {
 		node root;
@@ -45,6 +45,6 @@ namespace family {
 				return this;
 			}
 		
-	}
+	};
 	
 }
