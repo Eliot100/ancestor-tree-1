@@ -1,5 +1,5 @@
 #include <string>
-
+using namespace std;
 namespace family {
 	
 	class node {
