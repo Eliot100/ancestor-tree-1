@@ -1,6 +1,15 @@
 #include <string>
 
 namespace family {
+	
+	class node {
+		string name;
+		string relation;
+		node *mother, *father;
+		public:
+			node (string personName);
+	}
+	
 	class  Tree {
 		node root;
 	
@@ -14,11 +23,4 @@ namespace family {
 			Tree& remove (string name) ;
 	}
 	
-	class node {
-		string name;
-		string relation;
-		node *mother, *father;
-		public:
-			node (string personName);
-	}
 }
