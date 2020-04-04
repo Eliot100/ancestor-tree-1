@@ -16,6 +16,7 @@ namespace family {
 	
 	class node {
 		string name;
+		string relation;
 		node *mother, *father;
 		public:
 			node (string personName);

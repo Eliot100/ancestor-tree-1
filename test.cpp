@@ -3,15 +3,22 @@
 #include <string>
 #include <iostream>
 
+
 /*
  * @author Eli, Ron and Tal
  *
- *
  */
-TEST_CASE("") {
+ 
+TEST_CASE(" first case") {
 	family::Tree T ("Yosef"); 
-	T.addFather("Yosef", "Yaakov")
-	
-	CHECK(phonetic::find(text0, parmotaitionOf_famous[i]) == std::string("famous"));
-	CHECK(phonetic::find(text0, parmotaitionOf_famous[i]) == std::string("famous"));
+	T.addFather("Yosef", "Yaakov") 
+	 .addMother("Yosef", "Rachel")   
+	 .addFather("Yaakov", "Isaac")
+	 .addMother("Yaakov", "Rivka")
+	 .addFather("Isaac", "Avraham")
+	 .addFather("Avraham", "Terah");
+	 
+	for (int i = 0; i<100; i++)
+		CHECK(family:: T.relation("Yaakov") == string("father"));
+
 }

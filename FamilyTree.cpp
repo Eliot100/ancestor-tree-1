@@ -6,7 +6,9 @@ namespace family {
 		node root;
 	
 		public: 
-			Tree (string rootName) : root (new node(rootName)){}
+			Tree (string rootName) : root (new node(rootName)){
+				
+			}
 			
 			Tree& addFather (string sonName, string fatherName){
 				return this;
@@ -36,11 +38,11 @@ namespace family {
 	
 	class node {
 		string name;
+		string relation;
 		node *mother, *father;
 		public:
 			node (string personName) : name(personName) {}
-			//node& getMother(){return this.mother;}
-			//node& getFather(){return this.father;}
+			
 	}
 	
 }
