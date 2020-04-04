@@ -9,7 +9,9 @@ namespace family {
 		string relation;
 		node *mother, *father;
 		public:
-			node (string personName) : name(personName) {}
+			node (string personName) {
+				this.name = personName;
+			}
 			
 	};
 	
