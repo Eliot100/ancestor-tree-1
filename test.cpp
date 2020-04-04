@@ -18,7 +18,7 @@ TEST_CASE(" first case") {
 	 .addFather("Isaac", "Avraham")
 	 .addFather("Avraham", "Terah");
 	 
-	for (int i = 0; i<100; i++)
-		CHECK( T.relation("Yaakov") == string("father") );
+	//for (int i = 0; i<100; i++)
+		CHECK( T.relation("Yaakov") == "father" );
 
 }
