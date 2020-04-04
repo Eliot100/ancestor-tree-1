@@ -9,9 +9,8 @@ namespace family {
 		string relation;
 		node *mother, *father;
 		public:
-			node (string personName) {
-				this->name = personName;
-			}
+			node (string personName)
+			: name(personName), relation("me"){}
 			
 	};
 	
@@ -19,7 +18,7 @@ namespace family {
 		node root;
 	
 		public: 
-			Tree (string rootName): root(*(new node(rootName))) {
+			Tree (string rootName): root(rootName) {
 					
 			}
 			
