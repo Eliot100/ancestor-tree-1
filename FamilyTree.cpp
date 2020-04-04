@@ -7,11 +7,11 @@ namespace family {
 	class node {
 		string name;
 		string relation;
-		node *mother, *father;
-		public:
-			node (string personName) {
-				this->name = personName;
-			}
+	//	node *mother, *father;
+	//	public:
+	//		node (string personName) {
+	//			this->name = personName;
+	//		}
 			
 	};
 	
@@ -19,7 +19,7 @@ namespace family {
 		node root;
 	
 		public: 
-			Tree (string rootName) : root(rootName,1,null,null) {
+			Tree (string rootName) : root(rootName,1) {
 				
 			}
 			
