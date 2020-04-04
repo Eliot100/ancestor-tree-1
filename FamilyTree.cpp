@@ -13,20 +13,20 @@ namespace family {
 			
 	};
 	
-	class  Tree {
+	class Tree {
 		node root;
 	
 		public: 
-			Tree (string rootName) : root(rootName){
-				
-			}
+			Tree (string rootName) : root(rootName){}
 			
 			Tree& addFather (string sonName, string fatherName){
-				return this;
+				
+				return *this;
 			}
 			
 			Tree& addMother (string sonName, string motherName){
-				return this;
+				
+				return *this;
 			}
 			
 			string relation (string ancestorName){
@@ -42,7 +42,8 @@ namespace family {
 			}
 			
 			Tree& remove (string name) {
-				return this;
+				
+				return *this;
 			}
 		
 	};
