@@ -2,45 +2,45 @@
 #include <string>
 
 namespace family {
-	class  ancestorTree {
+	class  Tree {
 		node root;
 	
 		public: 
-			ancestorTree (string rootName)
-			: root (new node(rootName)){}
+			Tree (string rootName) : root (new node(rootName)){}
 			
-			void addFather (string sonName, string fatherName){
-				
+			Tree& addFather (string sonName, string fatherName){
+				return this;
 			}
 			
-			void addMother (string sonName, string motherName){
-				
+			Tree& addMother (string sonName, string motherName){
+				return this;
 			}
 			
-			string relation (string ancestorName){}
+			string relation (string ancestorName){
+				return "";
+			}
 			
 			string find (string relation2Root){
-				
+				return ""
 			}
 			
-			void display (ancestorTree tree){
-				
+			void display (Tree tree){
+				printf(" display test ")
 			}
 			
-			void remove (string name) {
-				
+			Tree& remove (string name) {
+				return this;
 			}
-		
-		
 		
 	}
 	
 	class node {
 		string name;
-		node mother, father;
+		node *mother, *father;
 		public:
 			node (string personName) : name(personName) {}
 			//node& getMother(){return this.mother;}
 			//node& getFather(){return this.father;}
 	}
+	
 }
