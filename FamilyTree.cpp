@@ -38,7 +38,7 @@ namespace family {
 			}
 			
 			void display (){
-				printf(" display test ")
+				printf(" display test ");
 			}
 			
 			Tree& remove (string name) {
