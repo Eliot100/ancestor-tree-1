@@ -10,31 +10,36 @@ namespace family {
 		node *mother, *father;
 		public:
 			node (string personName)
-			: name(personName), relation("me"), mother(NULL), father(NULL){}
-			
+			: name(personName), relation(""), mother(NULL), father(NULL){}
+		
 	};
 	
 	class Tree {
 		node root;
 	
 		public: 
-			Tree (string rootName): root(rootName) {}
+			Tree (const string rootName): root(rootName) {
+				this.root.relation = "me";
+			}
 			
-			Tree& addFather (string sonName, string fatherName){
+			Tree& addFather (const string sonName, const string fatherName){
 				
 				return *this;
 			}
 			
-			Tree& addMother (string sonName, string motherName){
+			Tree& addMother (const string sonName, const string motherName){
 				
 				return *this;
 			}
 			
-			string relation (string ancestorName){
-				return "";
+			string relation (const string ancestorName){
+				//node ancestorNode = recursiveGetAncestorNode(this.root, ancestorName);
+				//if(ancestorNode == NULL)
+				//	return "unrelated";
+				//return ancestorNode.name;
 			}
 			
-			string find (string relation2Root){
+			string find (const string relation2Root){
 				return "";
 			}
 			
@@ -42,11 +47,27 @@ namespace family {
 				printf(" display test ");
 			}
 			
-			Tree& remove (string name) {
+			Tree& remove (const string name) {
 				
 				return *this;
 			}
 		
+		private:
+			//node recursiveGetAncestorNode(const node &rootNode, string ancestorName){
+			//	if(rootNode.name == ancestorName)
+			//		return rootNode.relation;
+			//	node& ancestorNode;
+			//	if(rootNode->father != NULL){
+			//		ancestorNode = recursiveGetAncestorNode(rootNode->father, ancestorName);
+			//		if(ancestorNode != NULL)
+			//			return &ancestorNode;
+			//	}
+			//	if(rootNode->mother != NULL){
+			//		ancestorNode = recursiveGetAncestorNode(rootNode->mother, ancestorName);					
+			//		if(ancestorNode != NULL)
+			//			return &ancestorNode;
+			//	}
+			//}
 	};
 	
 }

@@ -14,13 +14,13 @@ namespace family {
 		node root;
 	
 		public: 
-			Tree (string rootName);
-			Tree& addFather (string sonName, string fatherName);
-			Tree& addMother (string sonName, string motherName);
-			string relation (string ancestorName);
-			string find (string relation2Root);
+			Tree (const string rootName);
+			Tree& addFather (const string sonName, const string fatherName);
+			Tree& addMother (const string sonName, const string motherName);
+			string relation (const string ancestorName);
+			string find (const string relation2Root);
 			void display ();
-			Tree& remove (string name) ;
+			Tree& remove (const string name) ;
 	};
 	
 }
