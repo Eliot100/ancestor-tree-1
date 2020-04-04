@@ -19,8 +19,8 @@ namespace family {
 		node root;
 	
 		public: 
-			Tree (string rootName) {
-				this->root = new node(rootName);
+			Tree (string rootName) : root(new node(rootName)) {
+				
 			}
 			
 			Tree& addFather (string sonName, string fatherName){
