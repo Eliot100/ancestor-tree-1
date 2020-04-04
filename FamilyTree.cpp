@@ -37,7 +37,7 @@ namespace family {
 				return ""
 			}
 			
-			void display (Tree tree){
+			void display (){
 				printf(" display test ")
 			}
 			

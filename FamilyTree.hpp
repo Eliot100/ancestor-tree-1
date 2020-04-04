@@ -19,7 +19,7 @@ namespace family {
 			Tree& addMother (string sonName, string motherName);
 			string relation (string ancestorName);
 			string find (string relation2Root);
-			void display (Tree tree);
+			void display ();
 			Tree& remove (string name) ;
 	};
 	
