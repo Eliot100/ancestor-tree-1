@@ -19,7 +19,7 @@ namespace family {
 		node root;
 	
 		public: 
-			Tree (string rootName) : root(rootName) {
+			Tree (string rootName) : root(rootName,1,null,null) {
 				
 			}
 			
