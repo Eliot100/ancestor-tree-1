@@ -34,7 +34,7 @@ namespace family {
 			}
 			
 			string find (string relation2Root){
-				return ""
+				return "";
 			}
 			
 			void display (){
