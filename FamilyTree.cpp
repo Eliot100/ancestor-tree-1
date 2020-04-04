@@ -20,7 +20,7 @@ namespace family {
 	
 		public: 
 			Tree (string rootName) {
-			root:	(rootName)
+			root:	(rootName);
 				
 			}
 			
