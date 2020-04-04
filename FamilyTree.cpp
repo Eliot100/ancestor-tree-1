@@ -21,12 +21,12 @@ namespace family {
 			
 			Tree& addFather (string sonName, string fatherName){
 				
-				return &this;
+				return root;
 			}
 			
 			Tree& addMother (string sonName, string motherName){
 				
-				return &this;
+				return root;
 			}
 			
 			string relation (string ancestorName){
@@ -43,7 +43,7 @@ namespace family {
 			
 			Tree& remove (string name) {
 				
-				return &this;
+				return root;
 			}
 		
 	};
