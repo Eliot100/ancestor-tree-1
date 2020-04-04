@@ -8,10 +8,10 @@ namespace family {
 		string name;
 		string relation;
 		node *mother, *father;
-		public:
-			node (string personName) {
-				this.name = personName;
-			}
+		//public:
+		//	node (string personName) {
+		//		this.name = personName;
+		//	}
 			
 	};
 	
@@ -19,7 +19,9 @@ namespace family {
 		node root;
 	
 		public: 
-			Tree (string rootName) : root(rootName){}
+			Tree (string rootName) {
+				this.root->name = rootName;
+			}
 			
 			Tree& addFather (string sonName, string fatherName){
 				
