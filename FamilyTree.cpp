@@ -8,7 +8,7 @@ namespace family{
     }
 
     Tree::Tree(const string rootName) : root(rootName) {
-        this->root->relation = "me";
+        this->root.relation = "me";
 
     }
 
