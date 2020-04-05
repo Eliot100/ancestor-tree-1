@@ -2,25 +2,30 @@
 using namespace std;
 namespace family {
 
-	class node {
-		string name;
-		string relation;
-		node *mother, *father;
-		public:
-			node (string personName);
-	};
+    class node {
+        private:
+            string name;
+            string relation;
+            node mother,father;
+
+        public:
+            node (string personName);
+            ~node(){
+                delete mother
+                delete father
+            }
+        };
 	
 	class  Tree {
-		Node *root;
-	
-		public: 
+		node root;
+		public:
 			Tree (const string rootName);
-			Tree& addFather (const string sonName, const string fatherName);
-			Tree& addMother (const string sonName, const string motherName);
-			string relation (const string ancestorName);
+			Tree addFather (const string sonName, const string fatherName);
+			Tree addMother (const string sonName, const string motherName);
 			string find (const string relation2Root);
 			void display ();
-			Tree& remove (const string name) ;
+			Tree remove (const string name) ;
+			string relation (const string ancestorName);
 	};
-	
+
 }
