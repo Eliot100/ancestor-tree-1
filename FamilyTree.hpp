@@ -9,7 +9,7 @@ namespace family {
             family::Node *mother, *father;
 
         public:
-            Node (string personName);
+            Node (string personName) : name(personName),relation(""),mother(NULL),father(NULL){}
             //Node(){
             //    delete mother;
             //    delete father;
