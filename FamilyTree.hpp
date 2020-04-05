@@ -1,22 +1,21 @@
 #include <string>
 using namespace std;
 namespace family {
-
+	
     class node {
         private:
             string name;
             string relation;
-            node mother,father;
+            node *mother, *father;
 
         public:
             node (string personName);
             ~node(){
-                delete mother
-                delete father
+                delete mother;
+                delete father;
             }
-        };
-	
-	class  Tree {
+    };
+	class Tree {
 		node root;
 		public:
 			Tree (const string rootName);
