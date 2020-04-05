@@ -1,5 +1,6 @@
 
 using namespace std;
+#include <string>	
 namespace family {
 	
     class Node {
