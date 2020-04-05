@@ -19,11 +19,11 @@ namespace family {
 		public:
 			family::Node root;
 			Tree (const string rootName);
-			Tree addFather (const string sonName, const string fatherName);
-			Tree addMother (const string sonName, const string motherName);
+			Tree& addFather (const string sonName, const string fatherName);
+			Tree& addMother (const string sonName, const string motherName);
 			string find (const string relation2Root);
 			void display ();
-			Tree remove (const string name) ;
+			Tree& remove (const string name) ;
 			string relation (const string ancestorName);
 	};
 
