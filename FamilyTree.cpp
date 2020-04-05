@@ -4,6 +4,7 @@ using namespace std;
 
 using namespace family;
 
+
 	
 	class node {
 		string name;
@@ -53,7 +54,7 @@ using namespace family;
 				return *this;
 			}
 		
-		private:
+		//private:
 			//node recursiveGetAncestorNode(const node &rootNode, string ancestorName){
 			//	if(rootNode.name == ancestorName)
 			//		return rootNode.relation;
@@ -71,4 +72,4 @@ using namespace family;
 			//}
 	};
 	
-}
+
