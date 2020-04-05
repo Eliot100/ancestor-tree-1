@@ -5,15 +5,19 @@ using namespace std;
 
 namespace family{
 
-
+	class node(string name) {
+        this->name = name;
+        father=mother=NULL;
+    }
 	
 	class node {
+		
 		string name;
 		string relation;
 		node *mother, *father;
-		public:
-			node (string personName)
-			: name(personName), relation(""), mother(NULL), father(NULL){}
+// 		public:
+// 			node (string personName)
+// 			: name(personName), relation(""), mother(NULL), father(NULL){}
 		
 	};
 	
