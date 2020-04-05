@@ -10,10 +10,10 @@ namespace family {
 
         public:
             Node (string personName);
-            ~Node(){
-                delete mother;
-                delete father;
-            }
+            //Node(){
+            //    delete mother;
+            //    delete father;
+            //}
     };
 	class Tree {
 		family::Node root;
