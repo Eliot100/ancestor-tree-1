@@ -2,7 +2,7 @@
 
 namespace family{
 
-    family::Tree::Tree(const string rootName) : root(rootName) {
+    family::Tree::Tree(const std::string rootName) : root(rootName) {
         this->root.relation = "me";
     }
 
@@ -17,7 +17,7 @@ namespace family{
     void Tree::display() {
     }
 
-    std::string Tree::find(const string relation2Root) {
+    std::string Tree::find(const std::string relation2Root) {
         return "";
     }
 
