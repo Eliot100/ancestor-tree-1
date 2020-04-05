@@ -3,12 +3,12 @@ using namespace std;
 namespace family {
 	
     class Node {
-        private:
+        public:
             string name;
             string relation;
             family::Node *mother, *father;
 
-        public:
+        
             Node (string personName) : name(personName),relation(""),mother(NULL),father(NULL){}
             //Node(){
             //    delete mother;
@@ -16,8 +16,8 @@ namespace family {
             //}
     };
 	class Tree {
-		family::Node root;
 		public:
+			family::Node root;
 			Tree (const string rootName);
 			Tree addFather (const string sonName, const string fatherName);
 			Tree addMother (const string sonName, const string motherName);
