@@ -1,4 +1,4 @@
-//#include "doctest.h"
+#include "doctest.h"
 #include "FamilyTree.hpp"
 // #include <string>
 // #include <iostream>;
