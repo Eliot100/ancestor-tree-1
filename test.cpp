@@ -1,8 +1,7 @@
 //#include "doctest.h"
 #include "FamilyTree.hpp"
-#include <string>
-#include <iostream>
-using namespace family;
+// #include <string>
+// #include <iostream>;
 
 /*
  * @author Eli, Ron and Tal
