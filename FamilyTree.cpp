@@ -7,7 +7,7 @@ namespace family{
         this->name=personName;
     }
 
-    Tree::Tree(const string rootName) {
+    Tree::Tree(const string rootName) : root(rootName) {
         this.root.relation = "me";
 
     }
