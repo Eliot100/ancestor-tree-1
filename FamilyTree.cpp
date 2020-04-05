@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-using namespace family;
+namespace family{
 
 
 	
@@ -71,5 +71,5 @@ using namespace family;
 			//	}
 			//}
 	};
-	
+}
 
