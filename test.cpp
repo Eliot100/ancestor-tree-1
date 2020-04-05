@@ -2,7 +2,7 @@
 #include "FamilyTree.hpp"
 #include <string>
 #include <iostream>
-
+using namespace family;
 
 /*
  * @author Eli, Ron and Tal
