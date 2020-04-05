@@ -3,24 +3,35 @@
 #include <string>
 using namespace std;
 
-namespace family{
+// namespace family{
 
-	class node(string name) {
-        this->name = name;
-        father=mother=NULL;
-    }
+// 	class node(string name) {
+//         this->name = name;
+//         father=mother=NULL;
+//     }
 	
-	class node {
+// 	class node {
 		
-		string name;
-		string relation;
-		node *mother, *father;
+// 		string name;
+// 		string relation;
+// 		node *mother, *father;
 // 		public:
 // 			node (string personName)
 // 			: name(personName), relation(""), mother(NULL), father(NULL){}
 		
-	};
-	
+//	};
+	namespace family {
+    Node::Node(string name)
+    {
+        this->name = name;
+        father=mother=NULL;
+    }
+    Tree::Tree(string name)
+    {
+        Node x(name);
+        this->root = &x;
+    }
+		
 	class Tree {
 		node root;
 	
