@@ -3,11 +3,7 @@ using namespace std;
 
 namespace family{
 
-    Node::Node(string personName) {
-        this->name=personName;
-    }
-
-    Tree::Tree(const string rootName) : root(rootName) {
+    family::Tree::Tree(const string rootName) : root(rootName) {
         this->root.relation = "me";
 
     }
