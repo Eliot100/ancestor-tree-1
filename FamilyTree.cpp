@@ -1,5 +1,4 @@
 #include "FamilyTree.hpp"
-using namespace std;
 
 namespace family{
 
