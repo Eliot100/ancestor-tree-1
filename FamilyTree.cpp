@@ -2,7 +2,8 @@
 #include <string>
 using namespace std;
 
-namespace family {
+using namespace family;
+
 	
 	class node {
 		string name;
