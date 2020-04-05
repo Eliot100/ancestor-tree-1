@@ -24,11 +24,11 @@ namespace family{
 
     string Tree::find(const string relation2Root) {
 
-        return ;
+        return "";
     }
 
     string Tree::relation(const string ancestorName) {
-        return ;
+        return "" ;
     }
 
     Tree& Tree::remove(const string name) {
