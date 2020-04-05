@@ -3,12 +3,12 @@ using namespace std;
 
 namespace family{
 
-    node::node(string personName) {
+    Node::Node(string personName) {
         this->name=personName;
     }
 
     Tree::Tree(const string rootName) : root(rootName) {
-        this.root.relation = "me";
+        this->root->relation = "me";
 
     }
 
@@ -41,12 +41,12 @@ namespace family{
 
 }
 
-//			string relation (const string ancestorName){
-				//node ancestorNode = recursiveGetAncestorNode(this.root, ancestorName);
-				//if(ancestorNode == NULL)
-				//	return "unrelated";
-				//return ancestorNode.name;
-//			}
+	// string relation (const string ancestorName){
+		// node ancestorNode = recursiveGetAncestorNode(this.root, ancestorName);
+		// if(ancestorNode == NULL)
+			// return "unrelated";
+		// return ancestorNode.name;
+	// }
     //private:
     //node recursiveGetAncestorNode(const node &rootNode, string ancestorName){
     //	if(rootNode.name == ancestorName)
