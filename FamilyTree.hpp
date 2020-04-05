@@ -1,20 +1,14 @@
 #include <string>
 using namespace std;
 namespace family {
-	 class Node{
-    public:
-        string name;
-        Node* father;
-        Node* mother;
-        Node(string name);
-    };
-// 	class node {
-// 		string name;
-// 		string relation;
-// 		node *mother, *father;
-// 		public:
-// 			node (string personName);
-// 	};
+
+	class node {
+		string name;
+		string relation;
+		node *mother, *father;
+		public:
+			node (string personName);
+	};
 	
 	class  Tree {
 		Node *root;
