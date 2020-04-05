@@ -25,7 +25,7 @@ namespace family {
 			std::string find (const std::string relation2Root);
 			void display ();
 			Tree& remove (const std::string name) ;
-			string relation (const std::string ancestorName);
+			std::string relation (const std::string ancestorName);
 	};
 
 }
