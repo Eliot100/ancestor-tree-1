@@ -1,3 +1,4 @@
+#include "FamilyTree.hpp"
 
 #include <string>
 using namespace std;
