@@ -1,44 +1,22 @@
 #include "FamilyTree.hpp"
 using namespace std;
-namespace family {
-    Node::Node(string name)
-    {
+
+namespace family{
+
+	class node(string name) {
         this->name = name;
         father=mother=NULL;
     }
-    Tree::Tree(string name)
-    {
-        Node x(name);
-        this->root = &x;
-    }
-// namespace family{
-
-// 	class node(string name) {
-//         this->name = name;
-//         father=mother=NULL;
-//     }
 	
-// 	class node {
+	class node {
 		
-// 		string name;
-// 		string relation;
-// 		node *mother, *father;
-// 		public:
-// 			node (string personName)
-// 			: name(personName), relation(""), mother(NULL), father(NULL){}
+		string name;
+		string relation;
+		node *mother, *father;
+		public:
+			node (string personName)
+			: name(personName), relation(""), mother(NULL), father(NULL){}
 		
-//	};
-// 	namespace family {
-//     Node::Node(string name)
-//     {
-//         this->name = name;
-//         father=mother=NULL;
-//     }
-//     Tree::Tree(string name)
-//     {
-//         Node x(name);
-//         this->root = &x;
-//     }
 		
 	class Tree {
 		node root;
