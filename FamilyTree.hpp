@@ -1,31 +1,31 @@
 #include <iostream>
-using namespace std;
 
 namespace family {
 	
     class Node {
         public:
-            string name;
-            string relation;
+            std::string name;
+            std::string relation;
             family::Node *mother, *father;
 
         
-            Node (string personName) : name(personName),relation(""),mother(NULL),father(NULL){}
+            Node (std::string personName) : name(personName),relation(""),mother(NULL),father(NULL){}
             //Node(){
             //    delete mother;
             //    delete father;
             //}
     };
+	
 	class Tree {
 		public:
 			family::Node root;
-			Tree (const string rootName);
-			Tree& addFather (const string sonName, const string fatherName);
-			Tree& addMother (const string sonName, const string motherName);
-			string find (const string relation2Root);
+			Tree (const std::string rootName);
+			Tree& addFather (const std::string sonName, const std::string fatherName);
+			Tree& addMother (const std::string sonName, const std::string motherName);
+			std::string find (const std::string relation2Root);
 			void display ();
-			Tree& remove (const string name) ;
-			string relation (const string ancestorName);
+			Tree& remove (const std::string name) ;
+			string relation (const std::string ancestorName);
 	};
 
 }

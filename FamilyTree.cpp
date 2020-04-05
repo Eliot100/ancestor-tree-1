@@ -1,36 +1,31 @@
 #include "FamilyTree.hpp"
-using namespace std;
+
 namespace family{
 
     family::Tree::Tree(const string rootName) : root(rootName) {
         this->root.relation = "me";
-
     }
 
-    Tree& Tree::addFather(const string sonName, const string fatherName) {
-
+    Tree& Tree::addFather(const std::string sonName, const std::string fatherName) {
         return *this;
     }
 
-    Tree& Tree::addMother(const string sonName, const string motherName) {
-
+    Tree& Tree::addMother(const std::string sonName, const std::string motherName) {
         return *this;
     }
 
     void Tree::display() {
-
     }
 
-    string Tree::find(const string relation2Root) {
-
+    std::string Tree::find(const string relation2Root) {
         return "";
     }
 
-    string Tree::relation(const string ancestorName) {
-        return "" ;
+    std::string Tree::relation(const std::string ancestorName) {
+        return "";
     }
 
-    Tree& Tree::remove(const string name) {
+    Tree& Tree::remove(const std::string name) {
         return *this;
     }
 
