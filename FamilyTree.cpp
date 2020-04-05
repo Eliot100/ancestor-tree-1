@@ -1,5 +1,5 @@
 #include "FamilyTree.hpp"
-#include <string>
+using namespace std;
 namespace family{
 
     family::Tree::Tree(const string rootName) : root(rootName) {
