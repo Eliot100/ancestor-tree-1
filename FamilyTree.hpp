@@ -1,4 +1,11 @@
+
+#pragma once
 #include <iostream>
+using namespace std;
+#include <stdio.h>
+#include <string>
+#include <cmath>
+#include <cassert>
 
 namespace family {
 	
