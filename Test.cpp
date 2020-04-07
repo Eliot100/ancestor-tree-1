@@ -58,15 +58,15 @@ TEST_CASE(" Check relation ") {
 TEST_CASE(" Check find ") {
 	family::Tree T = addFamily();
 	CHECK( T.find("me") == "Yosef" );
-	CHECK( T.find("father") == "Yaakov" );//25
-	CHECK( T.find("mother") == "Rachel" );
+	CHECK( T.find("father") == "Yaakov" );
+	CHECK( T.find("mother") == "Rachel" );//25
 	CHECK( ( T.find("grandfather") == "Isaac" || T.find("grandfather") == "Bob" ) ); 
 	CHECK( ( T.find("grandmother") == "Rivka" || T.find("grandmother") == "Rut" ) );
 	CHECK(( (T.find("great-grandfather") == "Avraham" || T.find("great-grandfather") == "Terah") 
 		|| (T.find("great-grandfather") == "Ranan" || T.find("great-grandfather") == "Ran") ));
 	CHECK(( (T.find("great-grandmother") == "Noy" || T.find("great-grandmother") == "lee" )
-		|| ( T.find("great-grandmother") == "Michela" || T.find("great-grandmother") == "Mor" ) ));//30
-	CHECK( T.find("great-great-grandfather") == "Ron" );
+		|| ( T.find("great-grandmother") == "Michela" || T.find("great-grandmother") == "Mor" ) ));
+	CHECK( T.find("great-great-grandfather") == "Ron" );//30
 	CHECK( T.find("great-great-grandmother") == "Miriam" ); 
 }
  
@@ -74,7 +74,7 @@ TEST_CASE(" first case ") {
 	family::Tree T ("Yosef"); 
 	T.addFather("Yosef", "Yaakov");
 	 
-	for (int i = 0; i<68; i++)
+	for (int i = 0; i<70; i++)
 		CHECK( T.relation("Yaakov") == "father" );
 
 }
