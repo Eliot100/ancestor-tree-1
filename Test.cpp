@@ -22,7 +22,7 @@
 	 .addFather("Bob", "Ranan")
 	 .addMother("Bob", "Michela")
 	 .addFather("Rut", "Ran")
-	 .addMother("Rut", "Mor");
+	 .addMother("Rut", "Mor")
 	 .addFather("Ran", "Ron")
 	 .addMother("Mor", "Miriam");
 	 return T;
