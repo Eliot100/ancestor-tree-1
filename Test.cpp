@@ -7,7 +7,7 @@
  * @author Eli, Ron and Tal
  *
  */
- family::Tree& addFamily(){
+ family::Tree addFamily(){
 	 family::Tree T ("Yosef");
 	 T.addFather("Yosef", "Yaakov") 
 	 .addMother("Yosef", "Rachel")   
@@ -62,10 +62,10 @@ TEST_CASE(" Check find ") {
 	CHECK( T.find("mother") == "Rachel" );
 	CHECK( ( T.find("grandfather") == "Isaac" || T.find("grandfather") == "Bob" ) ); 
 	CHECK( ( T.find("grandmother") == "Rivka" || T.find("grandmother") == "Rut" ) );
-	CHECK( (T.find("great-grandfather") == "Avraham" || T.find("great-grandfather") == "Terah") 
-		|| (T.find("great-grandfather") == "Ranan" || T.find("great-grandfather") == "Ran") );
-	CHECK( (T.find("great-grandmother") == "Noy" || T.find("great-grandmother") == "lee" )
-		|| ( T.find("great-grandmother") == "Michela" || T.find("great-grandmother") == "Mor" ) );//30
+	CHECK(( (T.find("great-grandfather") == "Avraham" || T.find("great-grandfather") == "Terah") 
+		|| (T.find("great-grandfather") == "Ranan" || T.find("great-grandfather") == "Ran") ));
+	CHECK(( (T.find("great-grandmother") == "Noy" || T.find("great-grandmother") == "lee" )
+		|| ( T.find("great-grandmother") == "Michela" || T.find("great-grandmother") == "Mor" ) ));//30
 	CHECK( T.find("great-great-grandfather") == "Ron" );
 	CHECK( T.find("great-great-grandmother") == "Miriam" ); 
 }
