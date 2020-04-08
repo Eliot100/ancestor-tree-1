@@ -125,11 +125,11 @@ TEST_CASE(" Check remove") {
 	CHECK( T.find("great-great-grandmother") == "Terah" ); 
 	CHECK( T.find("great-great-grandmother") == "Miriam" ); //65
 }
-// TEST_CASE(" first case ") {
-// 	family::Tree T ("Yosef"); 
-// 	T.addFather("Yosef", "Yaakov");
+TEST_CASE(" first case ") {
+	family::Tree T ("Yosef"); 
+	T.addFather("Yosef", "Yaakov");
 	 
-	for (int i = 0; i<35; i++)
-		CHECK( T.relation("Yaakov") == "father" );
+// 	for (int i = 0; i<35; i++)
+// 		CHECK( T.relation("Yaakov") == "father" );
 
 }
