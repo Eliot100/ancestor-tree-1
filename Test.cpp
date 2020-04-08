@@ -71,11 +71,18 @@ TEST_CASE(" Check find ") {
 }
  
  
-// TEST_CASE(" Check remove") {
-// 	family::Tree T = addFamily();
-// 	CHECK(T.remove("Rachel"));
-	
-// }
+TEST_CASE(" Check remove") {
+	family::Tree T = addFamily();
+	CHECK(T.remove("Rachel"));
+	CHECK(T.remove("Yosef"));
+	CHECK(T.remove("Avraham"));
+	CHECK(T.remove("Rut"));
+	CHECK(T.remove("Mor"));
+	CHECK(T.remove("Rivka"));
+	CHECK(T.remove("Michela"));
+	CHECK(T.remove("Miriam"));
+	CHECK(T.remove("Rotem"));
+}
 TEST_CASE(" first case ") {
 	family::Tree T ("Yosef"); 
 	T.addFather("Yosef", "Yaakov");
