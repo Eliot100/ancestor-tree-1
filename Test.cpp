@@ -68,6 +68,9 @@ TEST_CASE(" Check find ") {
 		|| ( T.find("great-grandmother") == "Michela" || T.find("great-grandmother") == "Mor" ) ));
 	CHECK( T.find("great-great-grandfather") == "Ron" );//30
 	CHECK( T.find("great-great-grandmother") == "Miriam" ); 
+	CHECK( T.find("me") == "Yaakov" );
+	CHECK( T.find("father") == "Miriam" );
+	CHECK( T.find("grandfather") == "Miriam" );
 }
  
  
