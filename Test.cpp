@@ -72,7 +72,7 @@ TEST_CASE(" Check find ") {
  
  
 TEST_CASE(" Check remove") {
-// 	family::Tree T = addFamily();
+ 	family::Tree T = addFamily();
 // 	CHECK(T.remove("Rachel"));
 // 	CHECK(T.remove("Yosef"));
 // 	CHECK(T.remove("Avraham"));
