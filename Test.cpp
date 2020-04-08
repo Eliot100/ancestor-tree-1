@@ -129,7 +129,7 @@ TEST_CASE(" first case ") {
 	family::Tree T ("Yosef"); 
 	T.addFather("Yosef", "Yaakov");
 	 
-// 	for (int i = 0; i<35; i++)
-// 		CHECK( T.relation("Yaakov") == "father" );
+	for (int i = 0; i<35; i++)
+		CHECK( T.relation("Yaakov") == "father" );
 
 }
