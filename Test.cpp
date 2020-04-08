@@ -73,14 +73,7 @@ TEST_CASE(" Check find ") {
  
 TEST_CASE(" Check remove") {
  	family::Tree T = addFamily();
-// 	CHECK(T.remove("Rachel"));
-// 	CHECK(T.remove("Yosef"));
-// 	CHECK(T.remove("Avraham"));
-// 	CHECK(T.remove("Rut"));
-// 	CHECK(T.remove("Mor"));
-// 	CHECK(T.remove("Rivka"));
-// 	CHECK(T.remove("Michela"));
-// 	CHECK(T.remove("Miriam"));
+
 	T.remove("Rotem");
 	CHECK( T.relation("Rotem") == "unrelated" );
 	T.remove("Rachel");
@@ -101,6 +94,16 @@ TEST_CASE(" Check remove") {
 	CHECK( T.relation("Rotem") == "unrelated" );
 	T.remove("Yosef");
 	CHECK( T.relation("Yosef") == "unrelated" );
+	T.remove("Isaac");
+	CHECK( T.relation("Isaac") == "unrelated" );
+	T.remove("Noy");
+	CHECK( T.relation("Noy") == "unrelated" );
+	T.remove("Avraham");
+	CHECK( T.relation("Avraham") == "unrelated" );
+	T.remove("Bob");
+	CHECK( T.relation("Bob") == "unrelated" );
+	T.remove("Ranan");
+	CHECK( T.relation("Ranan") == "unrelated" );
 }
 TEST_CASE(" first case ") {
 	family::Tree T ("Yosef"); 
