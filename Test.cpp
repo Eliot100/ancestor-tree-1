@@ -71,6 +71,12 @@ TEST_CASE(" Check find ") {
 	CHECK( T.find("me") == "Yaakov" );
 	CHECK( T.find("father") == "Miriam" );
 	CHECK( T.find("grandfather") == "Miriam" );
+	CHECK( T.find("great-great-grandmother") == "Noy" ); //35
+	CHECK( T.find("great-great-grandmother") == "Ron" ); 
+	CHECK( T.find("great-great-grandmother") == "Ran" ); 
+	CHECK( T.find("great-great-grandmother") == "Terah" ); 
+	CHECK( ( T.find("grandfather") == "Bob" || T.find("grandfather") == "Ran" ) ); 
+	CHECK( ( T.find("grandmother") == "Terah" || T.find("grandmother") == "Mor" ) );//40
 }
  
  
@@ -86,7 +92,7 @@ TEST_CASE(" Check remove") {
 	T.remove("Michela");
 	CHECK( T.relation("Michela") == "unrelated" );
 	T.remove("Rivka");
-	CHECK( T.relation("Rivka") == "unrelated" );
+	CHECK( T.relation("Rivka") == "unrelated" );//45
 	T.remove("Miriam");
 	CHECK( T.relation("Miriam") == "unrelated" );
 	T.remove("Mor");
@@ -96,7 +102,7 @@ TEST_CASE(" Check remove") {
 	T.remove("Rut");
 	CHECK( T.relation("Rotem") == "unrelated" );
 	T.remove("Yosef");
-	CHECK( T.relation("Yosef") == "unrelated" );
+	CHECK( T.relation("Yosef") == "unrelated" );//50
 	T.remove("Isaac");
 	CHECK( T.relation("Isaac") == "unrelated" );
 	T.remove("Noy");
@@ -106,13 +112,24 @@ TEST_CASE(" Check remove") {
 	T.remove("Bob");
 	CHECK( T.relation("Bob") == "unrelated" );
 	T.remove("Ranan");
-	CHECK( T.relation("Ranan") == "unrelated" );
+	CHECK( T.relation("Ranan") == "unrelated" );//55
+	
+	CHECK( T.find("great-great-grandfather") == "Ron" );
+	CHECK( T.find("great-great-grandmother") == "Miriam" ); 
+	CHECK( T.find("me") == "Yaakov" );
+	CHECK( T.find("father") == "Miriam" );
+	CHECK( T.find("grandfather") == "Miriam" );//60
+	CHECK( T.find("great-great-grandmother") == "Noy" ); 
+	CHECK( T.find("great-great-grandmother") == "Ron" ); 
+	CHECK( T.find("great-great-grandmother") == "Ran" ); 
+	CHECK( T.find("great-great-grandmother") == "Terah" ); 
+	CHECK( T.find("great-great-grandmother") == "Miriam" ); //65
 }
-TEST_CASE(" first case ") {
-	family::Tree T ("Yosef"); 
-	T.addFather("Yosef", "Yaakov");
+// TEST_CASE(" first case ") {
+// 	family::Tree T ("Yosef"); 
+// 	T.addFather("Yosef", "Yaakov");
 	 
-// 	for (int i = 0; i<70; i++)
-// 		CHECK( T.relation("Yaakov") == "father" );
+	for (int i = 0; i<35; i++)
+		CHECK( T.relation("Yaakov") == "father" );
 
 }
