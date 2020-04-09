@@ -24,7 +24,7 @@
 	 .addFather("Rut", "Ran")
 	 .addMother("Rut", "Mor")
 	 .addFather("Ran", "Ron")
-	 .addMother("Mor", "Miriam");
+	 .addMother("Ron", "Miriam");
      .addFather("Miriam", "More")
      .addMother("Miriam", "Moria");
      .addMother("More", "Nurit");
