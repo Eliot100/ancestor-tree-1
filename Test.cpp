@@ -25,6 +25,10 @@
 	 .addMother("Rut", "Mor")
 	 .addFather("Ran", "Ron")
 	 .addMother("Mor", "Miriam");
+     .addFather("Miriam", "More")
+     .addMother("Miriam", "Moria");
+     .addMother("More", "Nurit");
+
 	 return T;
  }
  
@@ -126,10 +130,58 @@ TEST_CASE(" Check remove") {
 	CHECK( T.find("great-great-grandmother") == "Miriam" ); //65
 }
 TEST_CASE(" first case ") {
-	family::Tree T ("Yosef"); 
-	T.addFather("Yosef", "Yaakov");
-	 
-	for (int i = 0; i<35; i++)
-		CHECK( T.relation("Yaakov") == "father" );
+    family::Tree T = addFamily();
+            CHECK(T.relation("More") == "More");
+    T.remove("More");
+            CHECK(T.relation("More") == "unrelated");
+    T.remove("Nurit");
+            CHECK(T.relation("Nurit") == "unrelated");
+            CHECK(T.relation("") == "unrelated");
+            CHECK(T.find("great-great-great-grandfather") == "Terah");//70
+            CHECK(T.find("great-great-grandfather") == "Avraham");
+            CHECK(T.relation("afik") == "unrelated");
+            CHECK(T.relation("taltal") == "unrelated");
+            CHECK(T.relation("yuvali") == "unrelated");
+            CHECK(T.relation("shuval") == "unrelated");
+            CHECK(T.relation("morya") == "unrelated");
+            CHECK(T.relation("tomery") == "unrelated");
+            CHECK(T.relation("adiy") == "unrelated");
+            CHECK(T.relation("edean") == "unrelated");
+            CHECK(T.relation("lelus") == "unrelated");//80
+    T.remove("Ranan");
+            CHECK(T.relation("Ranan") == "unrelated");
+    T.remove("Michela");
+            CHECK(T.relation("Michela") == "unrelated");
+    T.remove("Rut");
+            CHECK(T.relation("Rut") == "unrelated");
+    T.remove("Mor");
+            CHECK(T.relation("Mor") == "unrelated");
+    T.remove("Ran");
+            CHECK(T.relation("Ran") == "unrelated");
+    T.remove("Miriam");
+            CHECK(T.relation("Miriam") == "unrelated");
+    T.remove("Mor");
+            CHECK(T.relation("Mor") == "unrelated");
+    T.remove("Rotem");
+            CHECK(T.relation("Rut") == "unrelated");
+    T.remove("Rut");
+            CHECK(T.relation("Rotem") == "unrelated");
+    T.remove("Yosef");
+            CHECK(T.relation("Yosef") == "unrelated");//90
+    T.remove("Isaac");
+            CHECK(T.relation("Isaac") == "unrelated");
+    T.remove("Noy");
+            CHECK(T.relation("Noy") == "unrelated");
+    T.remove("Avraham");
+            CHECK(T.relation("Avraham") == "unrelated");
+    T.remove("Bob");
+            CHECK(T.relation("Bob") == "unrelated");
+    T.remove("More");
+            CHECK(T.relation("More") == "unrelated");
+            CHECK( !(T.find("great-great-grandfather") == "Ron") );
+            CHECK( !( T.find("great-great-grandmother") == "Miriam" ));
+            CHECK( !( T.find("me") == "Yaakov" ));
+            CHECK( !(T.find("father") == "Miriam") );
+            CHECK( !( T.find("grandfather") == "Miriam" ));//100
 
 }
